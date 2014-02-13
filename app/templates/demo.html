@@ -1,0 +1,11 @@
+<div id="demo">
+    <h1>{{title | uppercase}}</h1>
+    <ul>
+        <li
+            v-repeat="todos"
+            v-on="click: delete = true"
+        >
+            {{content}} : {{done}}
+        </li>
+    </ul>
+</div>

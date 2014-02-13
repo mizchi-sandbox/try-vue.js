@@ -20,7 +20,7 @@ module.exports = (grunt) ->
             'app/initialize.coffee'
           ]
         options:
-          transform: ['coffeeify']
+          transform: ['coffeeify', 'brfs']
 
       test:
         files:
@@ -29,7 +29,7 @@ module.exports = (grunt) ->
           ]
         options:
 
-          transform: ['coffeeify']
+          transform: ['coffeeify', 'brfs']
 
     mocha_phantomjs:
       options:
@@ -39,9 +39,10 @@ module.exports = (grunt) ->
     esteWatch:
       options:
         dirs: ['app/**/', 'test/**/']
+
       coffee: (filepath) ->
         console.log filepath
-        ['build', 'test']
+        ['build']
 
     connect:
       app:

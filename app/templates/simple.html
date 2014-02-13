@@ -1,0 +1,15 @@
+<h1>Hello, {{message}}</h1>
+
+<p class="{{message}}">color</h1>
+<input v-model="color"></input>
+
+<div class="counter" style="color: {{color}};">
+  <p> counter: {{counter}} </p>
+</div>
+
+<button v-on='click: addTweet'>add tweet</button>
+<ul class="tweets">
+  <li v-repeat="tweets" v-on='click: erase(this)' data-index='{{$index}}'>
+    {{name}}:{{$index}}:{{content}}
+  </li>
+</ul>
